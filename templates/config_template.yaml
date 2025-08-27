@@ -1,0 +1,110 @@
+# Configuration Template
+# Copy and modify this template for your specific jobs and workflows
+
+# Job Configuration
+job:
+  name: "sample_job"
+  description: "Sample data processing job"
+  timeout: 300  # seconds
+  max_retries: 3
+  
+# Data Sources
+sources:
+  database:
+    type: "postgresql"
+    host: "localhost"
+    port: 5432
+    database: "mydb"
+    username: "${DB_USERNAME}"
+    password: "${DB_PASSWORD}"
+    
+  api:
+    base_url: "https://api.example.com"
+    api_key: "${API_KEY}"
+    timeout: 30
+    
+  file:
+    path: "assets/data/sample/"
+    format: "csv"
+    encoding: "utf-8"
+
+# Data Targets
+targets:
+  database:
+    type: "postgresql"
+    host: "localhost"
+    port: 5432
+    database: "warehouse"
+    table: "processed_data"
+    
+  file:
+    path: "output/"
+    format: "parquet"
+    
+# Processing Configuration
+processing:
+  batch_size: 1000
+  chunk_size: 10000
+  parallel_workers: 4
+  
+# ML Configuration
+ml:
+  model_type: "random_forest"
+  parameters:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+  
+  training:
+    test_size: 0.2
+    validation_split: 0.1
+    cv_folds: 5
+    
+  features:
+    - "feature1"
+    - "feature2" 
+    - "feature3"
+    
+  target: "target_column"
+
+# GenAI Configuration
+genai:
+  llm:
+    provider: "openai"
+    model: "gpt-3.5-turbo"
+    temperature: 0.7
+    max_tokens: 1000
+    
+  embeddings:
+    provider: "openai"
+    model: "text-embedding-ada-002"
+    
+  vector_db:
+    provider: "pinecone"
+    index_name: "my-index"
+    dimension: 1536
+
+# Monitoring and Logging
+monitoring:
+  log_level: "INFO"
+  metrics_enabled: true
+  alerts_enabled: true
+  
+  metrics:
+    - "records_processed"
+    - "processing_time"
+    - "error_rate"
+    
+# Environment-specific overrides
+environments:
+  development:
+    processing:
+      batch_size: 100
+    monitoring:
+      log_level: "DEBUG"
+      
+  production:
+    processing:
+      parallel_workers: 8
+    monitoring:
+      alerts_enabled: true

@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "integer",
+      "description": "Unique identifier for the user"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the user"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 120,
+      "description": "Age of the user in years"
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the user is located"
+    },
+    "signup_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the user signed up (YYYY-MM-DD)"
+    }
+  },
+  "required": ["user_id", "name", "age", "city", "signup_date"]
+}
