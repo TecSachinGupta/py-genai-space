@@ -6,9 +6,9 @@ pydantic>=2.11.0
 pyyaml>=6.0
 
 # Data processing
-pyarrow>=10.0.0
-sqlalchemy>=1.4.0
-psycopg2-binary>=2.9.0
+# pyarrow>=10.0.0
+# sqlalchemy>=1.4.0
+# psycopg2-binary>=2.9.0
 
 # ML/AI
 torch
@@ -20,8 +20,8 @@ faiss-cpu
 chromadb>=1.0.20
 
 # Workflow orchestration
-apache-airflow>=2.5.0
+# apache-airflow>=2.5.0
 
 # Utilities
-click>=8.0.0
+# click>=8.0.0
 tqdm>=4.64.0
