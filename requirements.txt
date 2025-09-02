@@ -20,7 +20,9 @@ langchain-core
 langchain-community
 langchain-huggingface
 huggingface_hub[hf_xet]
-sentenance-transformers
+nltk
+sentence-transformers
+tiktoken
 transformers
 
 # Vector Store/ DB
@@ -33,3 +35,8 @@ chromadb>=1.0.20
 # Utilities
 # click>=8.0.0
 tqdm>=4.64.0
+
+## PDF Libs
+pymupdf
+pdfminer.six
+pypdf
