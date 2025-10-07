@@ -6,8 +6,8 @@ from datetime import datetime
 from typing import Dict, Any, Optional
 from pathlib import Path
 
-from src.utilities.common import setup_logging, validate_data_frame
-from src.configs.settings import get_settings
+from src.utilities.helpers.common import setup_logging, validate_data_frame
+from config.settings import get_settings
 from src.schemas.data_models import User, JobStatus
 
 

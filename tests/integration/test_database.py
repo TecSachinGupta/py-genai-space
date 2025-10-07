@@ -15,7 +15,7 @@ class TestDatabaseIntegration:
         mock_connection = Mock()
         mock_db_connection.return_value = mock_connection
         
-        from src.utilities.common import create_database_connection
+        from src.utilities.helpers.common import create_database_connection
         connection = create_database_connection()
         
         assert connection is not None
