@@ -1,12 +1,5 @@
-from cohere_embedding import CohereEmbeddingProvider
-from embedding_cache import EmbeddingCache
-from huggingface_embedding import HuggingFaceEmbeddingProvider
-from openai_embedding import OpenAIEmbeddingProvider
+"""
+embedding_providers module initialization.
+"""
 
-
-__all__ = [ \
-            CohereEmbeddingProvider, \
-            EmbeddingCache, \
-            HuggingFaceEmbeddingProvider, \
-            OpenAIEmbeddingProvider\
-          ]
+__version__ = "0.1.0"

@@ -1,7 +1,7 @@
 """Sample unit tests for the data engineering toolkit."""
 
 import pytest
-from src.utilities.common import validate_data_frame, safe_divide
+from src.utilities.helpers.common import validate_data_frame, safe_divide
 
 
 class TestUtilities:

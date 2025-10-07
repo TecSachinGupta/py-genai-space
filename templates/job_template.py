@@ -11,8 +11,8 @@ from datetime import datetime
 from typing import Dict, Any, Optional
 from pathlib import Path
 
-from src.utilities.common import setup_logging
-from src.configs.settings import get_settings
+from src.utilities.helpers.common import setup_logging
+from config.settings import get_settings
 from src.schemas.data_models import JobStatus
 
 
@@ -98,7 +98,7 @@ def main():
     # Load configuration
     config = {}
     if args.config:
-        from src.utilities.common import read_config_file
+        from src.utilities.helpers.common import read_config_file
         config = read_config_file(args.config)
     
     # Execute job

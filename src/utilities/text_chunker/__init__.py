@@ -1,11 +1,5 @@
-from .fixed_size_chunker import FixedSizeChunker
-from sementaic_chunker import SemanticChunker
-from sentence_chunker import SentenceChunker
-from token_chunker import TokenChunker
+"""
+text_chunker module initialization.
+"""
 
-__all__ = [
-    FixedSizeChunker,
-    SemanticChunker,
-    SentenceChunker,
-    TokenChunker
-]
+__version__ = "0.1.0"
