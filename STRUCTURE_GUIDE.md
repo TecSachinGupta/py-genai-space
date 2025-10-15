@@ -138,6 +138,7 @@ ComponentRegistry.register("custom", CustomProvider)
 
 ### Overview
 
+#### Simple View
 ```
 ai-data-platform/
 ├── config/                    # Configuration management
@@ -151,6 +152,414 @@ ai-data-platform/
 ├── scripts/                   # Utility scripts
 ├── tests/                     # Test suite
 └── assets/                    # Static resources
+```
+
+#### Detailed View
+```
+📁 py-genai-space/
+├── 📁 .github/
+│   ├── 📁 ISSUE_TEMPLATE/
+│   │   ├── 📝 bug_report.md
+│   │   ├── 📝 feature_request.md
+│   │   └── 📝 question.md
+│   ├── 🔄 workflows/
+│   │   ├── ⚙️ cd.yml
+│   │   ├── ⚙️ ci.yml
+│   │   └── ⚙️ security.yml
+│   └── 📝 pull_request_template.md
+├── 📱 applications/
+│   ├── 📁 api/
+│   │   ├── 📚 docs/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 middleware/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 routes/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 🐍 __init__.py
+│   ├── 📁 assistant/
+│   │   ├── 📁 interfaces/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 🐍 __init__.py
+│   ├── 📁 chat/
+│   │   ├── 📁 interfaces/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 🐍 __init__.py
+│   ├── 📁 search/
+│   │   ├── 📁 interfaces/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 🐍 __init__.py
+│   ├── 📁 server/
+│   │   ├── 📁 handlers/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 🐍 __init__.py
+│   └── 🐍 __init__.py
+├── 🎨 assets/
+│   ├── 📁 data/
+│   │   ├── 📁 processed/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 raw/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 sample/
+│   │   │   ├── 📝 README.md
+│   │   │   └── 📄 sample_data.csv
+│   │   └── 📁 schemas/
+│   │       └── 📋 user_schema.json
+│   ├── 📁 dependencies/
+│   │   └── 📝 README.md
+│   ├── 📁 images/
+│   │   └── 📝 README.md
+│   ├── 📁 knowledge/
+│   │   ├── 📁 documents/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 graphs/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 indexes/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 📁 metadata/
+│   │       └── 📄 .gitkeep
+│   ├── 📁 models/
+│   │   ├── 📁 artifacts/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 checkpoints/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 configs/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 📁 metadata/
+│   │       └── 📄 .gitkeep
+│   └── 📁 resources/
+│       ├── 📁 policies/
+│       │   └── 📄 .gitkeep
+│       ├── 📁 prompts/
+│       │   └── 📄 .gitkeep
+│       ├── 📁 schemas/
+│       │   └── 📄 .gitkeep
+│       └── 🔄 workflows/
+│           └── 📄 .gitkeep
+├── ⚙️ config/
+│   ├── 🐍 __init__.py
+│   ├── 🐍 logging.py
+│   └── 🐍 settings.py
+├── 🚀 deployments/
+│   ├── 📁 cloud/
+│   │   ├── 📁 aws/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 azure/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 📁 gcp/
+│   │       └── 📄 .gitkeep
+│   ├── 📁 docker/
+│   │   └── 🔧 scripts/
+│   │       └── 📄 .gitkeep
+│   ├── 📁 kubernetes/
+│   │   ├── 📁 base/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 helm/
+│   │   │   └── 📁 templates/
+│   │   │       └── 📄 .gitkeep
+│   │   └── 📁 overlays/
+│   │       ├── 📁 development/
+│   │       │   └── 📄 .gitkeep
+│   │       ├── 📁 production/
+│   │       │   └── 📄 .gitkeep
+│   │       └── 📁 staging/
+│   │           └── 📄 .gitkeep
+│   └── 📁 terraform/
+│       └── 📁 modules/
+│           ├── 📁 compute/
+│           │   └── 📄 .gitkeep
+│           ├── 📁 networking/
+│           │   └── 📄 .gitkeep
+│           └── 📁 storage/
+│               └── 📄 .gitkeep
+├── 📚 docs/
+│   ├── 📁 api/
+│   │   └── 📝 README.md
+│   ├── 📁 api-reference/
+│   │   └── 📄 .gitkeep
+│   ├── 📁 core-concepts/
+│   │   └── 📄 .gitkeep
+│   ├── 📁 deployment/
+│   │   └── 📄 .gitkeep
+│   ├── 📁 getting-started/
+│   │   └── 📄 .gitkeep
+│   ├── 📁 guides/
+│   │   └── 📝 security.md
+│   └── 📁 tutorials/
+│       ├── 📝 etl_pipeline_guide.md
+│       └── 📝 getting_started.md
+├── 💡 examples/
+│   ├── 📁 advanced/
+│   │   └── 📄 .gitkeep
+│   ├── 📁 integration/
+│   │   └── 📄 .gitkeep
+│   ├── 📁 intermediate/
+│   │   └── 📄 .gitkeep
+│   └── 📁 quickstart/
+│       ├── 📄 .gitkeep
+│       └── 🐍 01_simple_completion.py
+├── 📦 src/
+│   ├── 📁 context/
+│   │   ├── 📁 memory/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 persistence/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 session/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 core/
+│   │   ├── 🐍 __init__.py
+│   │   ├── 🐍 base.py
+│   │   ├── 🐍 exceptions.py
+│   │   └── 🐍 interfaces.py
+│   ├── 📁 data/
+│   │   ├── 📁 processors/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 serializers/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 sources/
+│   │   │   ├── 🐍 __init__.py
+│   │   │   ├── 🐍 base.py
+│   │   │   ├── 🐍 docx_processor.py
+│   │   │   ├── 🐍 pdf_loader.py
+│   │   │   ├── 🐍 pdf_processor.py
+│   │   │   └── 🐍 txt_processor.py
+│   │   ├── 📁 transformers/
+│   │   │   ├── 🐍 __init__.py
+│   │   │   ├── 🐍 chunking.py
+│   │   │   ├── 🐍 fixed_size_chunker.py
+│   │   │   ├── 🐍 sementaic_chunker.py
+│   │   │   ├── 🐍 sentence_chunker.py
+│   │   │   └── 🐍 token_chunker.py
+│   │   ├── 📁 validators/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 evaluation/
+│   │   ├── 📁 benchmarks/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 experiments/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 judges/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 metrics/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 execution/
+│   │   ├── 📁 engines/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 orchestration/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 state/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 tasks/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 interaction/
+│   │   ├── 📁 conversations/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 formatting/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 protocols/
+│   │   │   ├── 📁 mcp/
+│   │   │   │   ├── 📁 transports/
+│   │   │   │   │   └── 🐍 __init__.py
+│   │   │   │   └── 🐍 __init__.py
+│   │   │   ├── 📁 openai/
+│   │   │   │   └── 🐍 __init__.py
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 streaming/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 monitoring/
+│   │   ├── 📁 alerting/
+│   │   │   ├── 📁 channels/
+│   │   │   │   └── 🐍 __init__.py
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 logging/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 metrics/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 tracing/
+│   │   │   ├── 📁 exporters/
+│   │   │   │   └── 🐍 __init__.py
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 notebooks/
+│   │   ├── 📁 00_archived/
+│   │   │   ├── 🐍 __init__.py
+│   │   │   ├── 🐍 FaissStore.py
+│   │   │   └── 📝 README.md
+│   │   └── 🐍 __init__.py
+│   ├── 📁 pipelines/
+│   │   └── 🐍 __init__.py
+│   ├── 📁 providers/
+│   │   ├── 📁 completion/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 embedding/
+│   │   │   ├── 🐍 __init__.py
+│   │   │   ├── 🐍 base.py
+│   │   │   ├── 🐍 cohere_embedding.py
+│   │   │   ├── 🐍 embedding_cache.py
+│   │   │   ├── 🐍 huggingface_embedding.py
+│   │   │   ├── 🐍 manager.py
+│   │   │   └── 🐍 openai_embedding.py
+│   │   ├── 📁 multimodal/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 reasoning/
+│   │   ├── 📁 planning/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 selection/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 strategies/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 tools/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 retrieval/
+│   │   ├── 📁 filters/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 query/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 ranking/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 strategies/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 schemas/
+│   │   ├── 🐍 __init__.py
+│   │   ├── 🐍 data_models.py
+│   │   └── 🐍 file_data_models.py
+│   ├── 📁 security/
+│   │   ├── 📁 authentication/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 authorization/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 encryption/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 secrets/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 validation/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 storage/
+│   │   ├── 📁 cache/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 databases/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 indexes/
+│   │   │   ├── 📁 fulltext/
+│   │   │   │   └── 🐍 __init__.py
+│   │   │   ├── 📁 vector/
+│   │   │   │   ├── 🐍 __init__.py
+│   │   │   │   ├── 🐍 base.py
+│   │   │   │   ├── 🐍 chroma_store.py
+│   │   │   │   ├── 🐍 faiss_store.py
+│   │   │   │   └── 🐍 inmemory_store.py
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 objects/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 queues/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   ├── 📁 utilities/
+│   │   ├── 📁 concurrency/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 helpers/
+│   │   │   ├── 🐍 __init__.py
+│   │   │   └── 🐍 common.py
+│   │   ├── 📁 network/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 serialization/
+│   │   │   └── 🐍 __init__.py
+│   │   ├── 📁 text/
+│   │   │   └── 🐍 __init__.py
+│   │   └── 🐍 __init__.py
+│   └── 🐍 __init__.py
+├── 📁 templates/
+│   ├── ⚙️ config_template.yaml
+│   └── 🐍 job_template.py
+├── 🧪 tests/
+│   ├── 📁 fixtures/
+│   │   ├── 📁 configs/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 data/
+│   │   │   └── 📁 sample_documents/
+│   │   │       └── 📄 .gitkeep
+│   │   ├── 📁 mocks/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 🐍 __init__.py
+│   │   └── 🐍 sample_data.py
+│   ├── 📁 integration/
+│   │   ├── 📁 test_applications/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_pipelines/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_storage_integration/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_workflows/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 🐍 __init__.py
+│   │   └── 🐍 test_database.py
+│   ├── 📁 performance/
+│   │   └── 🐍 __init__.py
+│   ├── 📁 security/
+│   │   └── 🐍 __init__.py
+│   ├── 📁 unit/
+│   │   ├── 📁 test_context/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_core/
+│   │   │   ├── 📄 .gitkeep
+│   │   │   └── 🐍 test_base.py
+│   │   ├── 📁 test_data/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_execution/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_interaction/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_providers/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_reasoning/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_retrieval/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_storage/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 📁 test_utilities/
+│   │   │   └── 📄 .gitkeep
+│   │   ├── 🐍 __init__.py
+│   │   └── 🐍 test_sample.py
+│   └── 🐍 __init__.py
+├── 🔄 workflows/
+│   ├── 📁 airflow/
+│   │   ├── 📁 dags/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 📁 operators/
+│   │       └── 📄 .gitkeep
+│   ├── 📁 prefect/
+│   │   ├── 📁 flows/
+│   │   │   └── 📄 .gitkeep
+│   │   └── 📁 tasks/
+│   │       └── 📄 .gitkeep
+│   └── 📁 temporal/
+│       ├── 📁 activities/
+│       │   └── 📄 .gitkeep
+│       └── 🔄 workflows/
+│           └── 📄 .gitkeep
+├── 📄 .env.example
+├── 🚫 .gitignore
+├── ⚙️ .pre-commit-config.yaml
+├── 📝 CHANGELOG.md
+├── 📝 CONTRIBUTING.md
+├── 📜 LICENSE
+├── ⚡ Makefile
+├── ⚙️ mkdocs.yml
+├── 📋 pyproject.toml
+├── 📄 pytest.ini
+├── 📝 README.md
+├── 📄 requirements-dev.txt
+├── 📄 requirements.txt
+├── 🐍 setup.py
+└── 📝 STRUCTURE_GUIDE.md
 ```
 
 ### Detailed Breakdown

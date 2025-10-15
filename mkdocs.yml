@@ -1,0 +1,87 @@
+site_name: AI Data Platform Documentation
+site_description: Universal AI and Data Engineering Platform
+site_author: Your Team
+site_url: https://yourusername.github.io/py-genai-space/
+
+repo_name: TecSachinGupta/py-genai-space
+repo_url: https://github.com/TecSachinGupta/py-genai-space
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
+      - Configuration: getting-started/configuration.md
+      - First Application: getting-started/first-application.md
+  - Core Concepts:
+      - Architecture: core-concepts/architecture.md
+      - Providers: core-concepts/providers.md
+      - Storage: core-concepts/storage.md
+      - Retrieval: core-concepts/retrieval.md
+      - Execution: core-concepts/execution.md
+      - Reasoning: core-concepts/reasoning.md
+  - User Guides:
+      - Chat Applications: guides/chat-applications.md
+      - Search Systems: guides/search-systems.md
+      - Reasoning Systems: guides/reasoning-systems.md
+      - Data Pipelines: guides/data-pipelines.md
+      - Monitoring: guides/monitoring.md
+      - Security: guides/security.md
+  - API Reference:
+      - Core: api-reference/core.md
+      - Providers: api-reference/providers.md
+      - Storage: api-reference/storage.md
+      - Retrieval: api-reference/retrieval.md
+  - Contributing: CONTRIBUTING.md
+  - Changelog: CHANGELOG.md
